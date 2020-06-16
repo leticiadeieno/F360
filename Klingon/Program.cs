@@ -39,7 +39,7 @@ namespace Klingon
                             Console.WriteLine(string.Format("A quantidade de Verbos em Primeira Pessoa é: {0} \n", countVerbsInFirstPerson));
                             break;
                         default:
-                            Console.WriteLine("Opção Inválida!");
+                            Console.WriteLine("Opção Inválida!\n");
                             break;
                     }
                 } while (optionChoise != "4");           
