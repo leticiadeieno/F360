@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System.Collections.Generic;
+using System.Linq;
 using Klingon.Domain.Core.Contracts;
 
 namespace Klingon.Domain.Core.Services
@@ -70,6 +71,17 @@ namespace Klingon.Domain.Core.Services
             }
 
             return countKlingonVerbInFirstPerson;
+        }
+
+        public int CountBeautyNumbers(string[] list)
+        {
+            int countBeautyNumbers = 0;
+            int beautyNumber = 0;
+
+            if (beautyNumber >= 440566 && ((beautyNumber % 3) == 0))
+                countBeautyNumbers++;
+
+            return countBeautyNumbers;
         }
     }
 }

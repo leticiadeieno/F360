@@ -21,7 +21,7 @@ namespace Klingon
 
                 do
                 {
-                    Console.WriteLine("Digite o número de acordo com o item desejado: \n1-Preposições\n2-Verbos\n3-Verbos em Primeira Pessoa\n4-Sair");
+                    Console.WriteLine("Digite o número de acordo com o item desejado: \n1-Preposições\n2-Verbos\n3-Verbos em Primeira Pessoa\n4-Numeros Bonitos Distintos\n5-Sair");
                     optionChoise = Console.ReadLine();
 
                     switch (optionChoise)
@@ -38,11 +38,15 @@ namespace Klingon
                             var countVerbsInFirstPerson = _klingonService.CountVerbsInFirstPerson(listTextB);
                             Console.WriteLine(string.Format("A quantidade de Verbos em Primeira Pessoa é: {0} \n", countVerbsInFirstPerson));
                             break;
+                        case "4":
+                            var countBeautyNumbers = _klingonService.CountBeautyNumbers(listTextB);
+                            Console.WriteLine(string.Format("A quantidade de Números Bonitos é: {0} \n", countBeautyNumbers));
+                            break;
                         default:
                             Console.WriteLine("Opção Inválida!\n");
                             break;
                     }
-                } while (optionChoise != "4");           
+                } while (optionChoise != "5");           
             }
             catch (Exception ex)
             {
